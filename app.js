@@ -65,7 +65,9 @@ const getList = function(type){
 };
 
 const getSingle = function(type, id){
-    fetch(`https://swapi.dev/api/${type}${id}/`)
+    
+    //Addet "/" between the type & id.
+    fetch(`https://swapi.dev/api/${type}/${id}/`)
         .then(response => response.json())
         .then(data => {
             let sheet;
